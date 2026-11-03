@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f78">
+  <meta name="description" content="Gota Consciente: entenda seus hábitos e descubra oportunidades para economizar água em casa.">
+  <title>Gota Consciente | Água é vida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#" aria-label="Gota Consciente - início">
+        <span class="brand-mark">💧</span>
+        <span>gota<span class="brand-light">consciente</span></span>
+      </a>
+      <span class="nav-tag">Tecnologia + sustentabilidade</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">CADA GOTA CONTA</span>
+          <h1>Seu consumo de água começa com <em>consciência.</em></h1>
+          <p>Responda algumas perguntas sobre sua rotina e veja o que sua conta revela sobre o consumo de água da sua casa.</p>
+          <a class="hero-link" href="#questionario">Analisar meu consumo <span>↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="drop">💧</div>
+          <div class="art-note note-one"><strong>27.000 L</strong><small>em 27 m³</small></div>
+          <div class="art-note note-two"><span>🌱</span><small>Pequenas atitudes,<br>grande diferença</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap intro-strip">
+      <div class="intro-icon">i</div>
+      <p><strong>Como funciona?</strong> Informe seus hábitos e, se possível, o consumo em m³ da conta de água. O resultado combina o dado da conta com estimativas indicativas — sem confundir estimativa com medição.</p>
+    </section>
+
+    <section class="wrap form-section" id="questionario">
+      <div class="section-heading">
+        <span class="eyebrow">DIAGNÓSTICO DOMÉSTICO</span>
+        <h2>Vamos conhecer sua rotina?</h2>
+        <p>Preencha os campos abaixo. Não informe endereço, número de instalação ou outros dados pessoais.</p>
+      </div>
+
+      <form id="formulario" novalidate>
+        <section class="form-card">
+          <div class="card-heading"><span class="step">01</span><div><h3>Sua residência</h3><p>Algumas informações básicas para contextualizar o consumo.</p></div></div>
+          <div class="fields two">
+            <div class="field"><label for="moradores">Quantas pessoas moram na residência?</label><input id="moradores" name="moradores" type="number" min="1" max="30" value="2" required></div>
+            <div class="field"><label for="banheiros">Quantos banheiros existem?</label><select id="banheiros" required><option value="">Selecione</option><option value="1">1 banheiro</option><option value="2">2 banheiros</option><option value="3">3 ou mais banheiros</option></select></div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="card-heading"><span class="step">02</span><div><h3>Banho</h3><p>O tempo de banho influencia diretamente o volume utilizado.</p></div></div>
+          <div class="fields two">
+            <div class="field"><label for="banhos">Quantos banhos cada pessoa toma por dia?</label><select id="banhos" required><option value="">Selecione</option><option value="1">1 banho</option><option value="2">2 banhos</option><option value="3">3 ou mais banhos</option></select></div>
+            <div class="field"><label for="duracao">Quanto dura, em média, cada banho?</label><select id="duracao" required><option value="">Selecione</option><option value="5">Até 5 minutos</option><option value="8">De 6 a 10 minutos</option><option value="13">De 11 a 15 minutos</option><option value="18">Mais de 15 minutos</option></select></div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="card-heading"><span class="step">03</span><div><h3>Lavagem de roupas</h3><p>Conte como é a estrutura de lavanderia da casa.</p></div></div>
+          <div class="fields two">
+            <div class="field"><label for="tipoMaquina">Qual equipamento utiliza?</label><select id="tipoMaquina" required><option value="">Selecione</option><option value="top">Máquina de abertura superior</option><option value="front">Máquina de abertura frontal</option><option value="tanquinho">Tanquinho</option><option value="none">Não utiliza máquina de lavar</option></select></div>
+            <div class="field"><label for="quantidadeMaquinas">Quantas máquinas possui?</label><input id="quantidadeMaquinas" type="number" min="0" max="10" value="1" required></div>
+            <div class="field"><label for="capacidadeMaquina">Capacidade de cada máquina</label><select id="capacidadeMaquina" required><option value="">Selecione</option><option value="0">Não se aplica</option><option value="8">8 kg</option><option value="10">10 kg</option><option value="12">12 kg</option><option value="15">15 kg</option><option value="20">20 kg</option></select></div>
+            <div class="field"><label for="lavagens">Quantas lavagens realiza por semana?</label><select id="lavagens" required><option value="">Selecione</option><option value="1">1 a 2 lavagens</option><option value="3">2 a 3 lavagens</option><option value="5">4 a 5 lavagens</option><option value="8">6 ou mais lavagens</option></select></div>
+            <div class="field"><label for="cargaMaquina">Como costuma colocar roupas na máquina?</label><select id="cargaMaquina" required><option value="">Selecione</option><option value="adequada">Respeito a carga recomendada pelo fabricante</option><option value="pequena">Frequentemente lavo poucas peças por vez</option><option value="varia">Varia conforme a quantidade de roupas</option><option value="naoSei">Não sei informar</option></select></div>
+          </div>
+          <p class="field-hint">A avaliação do hábito considera o respeito à carga recomendada pelo fabricante. A eficiência hídrica individual depende do consumo por ciclo do modelo; sem essa informação, apresentamos apenas as faixas técnicas de referência do Inmetro.</p>
+        </section>
+
+        <section class="form-card">
+          <div class="card-heading"><span class="step">04</span><div><h3>Louças e torneiras</h3><p>Pequenos hábitos do dia a dia também fazem diferença.</p></div></div>
+          <div class="fields two">
+            <div class="field"><label for="loucas">Como costuma lavar a louça?</label><select id="loucas" required><option value="">Selecione</option><option value="manual">Manualmente na pia</option><option value="maquina">Máquina de lavar louças</option></select></div>
+            <div class="field"><label for="frequenciaLoucas">Quantas vezes lava a louça por dia?</label><select id="frequenciaLoucas" required><option value="">Selecione</option><option value="1">1 vez</option><option value="2">2 vezes</option><option value="3">3 vezes</option><option value="4">4 ou mais vezes</option></select></div>
+            <div class="field"><label for="torneira">Durante a escovação dos dentes, como usa a torneira?</label><select id="torneira" required><option value="">Selecione</option><option value="aberta">Deixo aberta durante toda a escovação</option><option value="enxague">Abro apenas para enxaguar</option><option value="fechada">Mantenho fechada durante a escovação</option></select></div>
+            <div class="field"><label for="ensaboaLoucas">Ao lavar louça manualmente, como usa a torneira?</label><select id="ensaboaLoucas" required><option value="">Selecione</option><option value="fechada">Fecho enquanto ensaboo e esfrego</option><option value="aberta">Deixo aberta enquanto ensaboo</option><option value="naoSeAplica">Não se aplica (uso máquina de lavar louças)</option><option value="naoSei">Não sei informar</option></select></div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="card-heading"><span class="step">05</span><div><h3>Banheiro e limpeza externa</h3><p>Informe a frequência de uso e a forma de limpeza da área externa.</p></div></div>
+          <div class="fields two">
+            <div class="field"><label for="descargas">Descargas por pessoa, em média, por dia</label><select id="descargas" required><option value="">Selecione</option><option value="2">1 a 3 descargas</option><option value="5">4 a 6 descargas</option><option value="7">7 ou mais descargas</option></select></div>
+            <div class="field"><label for="volumeDescarga">Volume aproximado por acionamento</label><select id="volumeDescarga" required><option value="naoSei" selected>Não sei informar</option><option value="6">6 litros (volume reduzido / VDR)</option><option value="12">12 litros (caixa acoplada convencional)</option><option value="outro">Outro volume / não identificado</option></select><small class="field-hint">Se não souber, mantenha “Não sei informar”. Não presumimos o volume apenas pelo tipo de caixa.</small></div>
+            <div class="field"><label for="limpeza">Como limpa o quintal ou área externa?</label><select id="limpeza" required><option value="">Selecione</option><option value="0">Não utiliza água nessa limpeza</option><option value="mangueira">Mangueira</option><option value="balde">Balde</option></select></div>
+            <div class="field full"><label for="tempoMangueira">Quanto tempo utiliza a mangueira por limpeza?</label><select id="tempoMangueira" required><option value="">Selecione</option><option value="5">Até 5 minutos</option><option value="10">De 6 a 10 minutos</option><option value="15">De 11 a 15 minutos</option><option value="20">De 16 a 20 minutos</option><option value="25">De 21 a 30 minutos</option><option value="35">Mais de 30 minutos</option></select></div>
+          </div>
+        </section>
+
+        <section class="form-card highlight-card">
+          <div class="card-heading"><span class="step">06</span><div><h3>Sua conta de água</h3><p>Este é o dado mais importante para conhecer o consumo total real da residência.</p></div></div>
+          <div class="fields two">
+            <div class="field"><label for="contaAgua">Consumo da conta mais recente (m³)</label><div class="input-suffix"><input id="contaAgua" type="number" min="0.1" step="0.1" placeholder="Ex.: 27" required><span>m³</span></div></div>
+            <div class="field"><label for="periodoConta">Período da conta (dias)</label><input id="periodoConta" type="number" min="1" max="120" value="30" required></div>
+          </div>
+          <p class="field-hint">1 m³ equivale a 1.000 litros. Você encontra o consumo e o período na fatura. Não envie uma foto da conta.</p>
+        </section>
+
+        <div class="submit-area"><button class="button-primary" type="submit">Analisar meu consumo <span>→</span></button><p>Seus dados ficam apenas nesta página e não são enviados para um servidor.</p></div>
+      </form>
+      <section id="resultado" class="results" aria-live="polite" hidden></section>
+    </section>
+
+    <section class="closing-band"><div class="wrap closing-content"><span>🌱</span><div><h2>Economizar água é um hábito coletivo.</h2><p>Observe sua rotina, compartilhe conhecimento e transforme pequenas atitudes em mudanças duradouras.</p></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="#"><span class="brand-mark">💧</span><span>gota<span class="brand-light">consciente</span></span></a><p>Projeto acadêmico de extensão · Tecnologia e Sustentabilidade na Comunidade</p><span>© 2026 Gota Consciente</span></div></footer>
+</body>
+</html>
